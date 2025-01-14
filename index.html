@@ -1,49 +1,556 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header id="header">The future of tech is here
-        <nav id="navbar">
-            <a href="nav-link"></a>
-        </nav>
-    </header>
-    <!-- <img src="https://static.vecteezy.com/system/resources/previews/024/049/007/original/computer-pc-icon-logo-design-vector.jpg" alt="" id="header-img"> -->
-    <!-- <iframe src="https://youtu.be/17_ukKwYE9U?si=vRybpbtqCloz4NiR" id="video" frameborder="0"></iframe>
-    <form action="https://www.freecodecamp.com/email-submit" id="form">
-        <input type="email" name="email" id="email" placeholder="Enter email">
-        <input type="pricing" name="" id="submit">
-        <input type="contact" name="" id="submit">
-
-
-    </form>
-    <div id="features">Lorem ipsum dolor sit amet.</div>
-    <div id="pricing">Lorem ipsum dolor sit amet.</div>
-    <div id="contact">Lorem ipsum dolor sit amet.</div>
-</body>
-</html> --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #161616;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(209, 209, 209);
+        }
+
+        .left {
+            font-size: 1.2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .firstSection > div {
+            width: 30%;
+            height: 80vh;
+        }
+
+        .leftSection {
+            display: flex;
+            flex-direction: column; /* Align content vertically */
+            justify-content: center; /* Center vertically */
+            height: 100%; /* Ensure it takes the full height of the parent */
+            font-size: 3rem;
+            color: #f3f9f8;
+        }
+
+        .rightSection img {
+            width: 90%;
+            margin: 50px 0;
+        }
+
+        header {
+            color: #f3f9f8;
+        }
+
+        .secondSection span {
+            color: #3DCFB6;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3DCFB6;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3DCFB6;
+        }
+
+        .secondSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            line-height: 1.5;
+        }
+
+        .rightSection {
+            color: #f3f9f8;
+            line-spacing:20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .secondSection code {
+            display: block;
+            background-color: #3d3d3d;
+            padding: 10px;
+            
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            border-radius: 10px;
+            margin-top: 10px;
+            color: #F3F9F8;
+            font-size: small;
+        }
+        @function strokeDashoffset($num) {
+            @return 440 - (440 * $num) / 100;
+        }
+        a {
+            text-decoration: none;
+          }
+          
+          .social-media-flex {
+            display: flex;
+          }
+          .social-media-flex-justify-content {
+            justify-content: center;
+          }
+          .social-media-flex-align-items {
+            align-items: center;
+          }
+          
+          .social-media-grid {
+            display: grid;
+          }
+          .social-media-grid-gap {
+            grid-gap: 0.5em;
+          }
+          
+          .main-container-social {
+            position: fixed;
+            bottom: 1em;
+            right: 1em;
+          }
+          
+          .container-social {
+            grid-template-rows: repeat(2, 1.5em);
+            border-radius: 0.25em;
+            padding: 0.5em;
+            background-color: #262626;
+            box-shadow: 0 0 0.25em #262626;
+          }
+          
+          .social-links {
+            grid-template-columns: repeat(3, 2em);
+            grid-gap: 0.5em;
+            z-index: 100;
+          }
+          
+          .social-link {
+            font-size: 1.5rem;
+            color: #bfbfbf;
+            transition: 0.3s all ease;
+            transition-timing-function: cubic-bezier(0, -0.5, 0, 0.5);
+          }
+          .social-link:hover {
+            color: #f2f2f2;
+            transform: translateY(-0.1em);
+            transition-timing-function: cubic-bezier(0.5, -1.5, 0.5, 1.5);
+          }
+          
+          .made {
+            display: block;
+            color: #f2f2f2;
+            font-size: 0.75rem;
+            text-align: center;
+          }
+          
+          * {
+            box-sizing: border-box;
+          }
+          
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0d0d0d;
+          }
+          
+          .container__progressbars {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            min-width: 270px;
+            width: 100%;
+            min-height: 100%;
+          }
+          
+          .progressbar {
+            position: relative;
+            width: 170px;
+            height: 170px;
+            margin: 1em;
+            transform: rotate(-90deg);
+          }
+          
+          .progressbar__svg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+          
+          .progressbar__svg-circle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-width: 10;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            stroke: white;
+            stroke-linecap: round;
+            transform: translate(5px, 5px);
+          }
+          
+          .shadow-html {
+            filter: drop-shadow(0 0 5px #ff6633);
+          }
+          .shadow-css {
+            filter: drop-shadow(0 0 5px #33bbff);
+          }
+          .shadow-scss {
+            filter: drop-shadow(0 0 5px #ff33ff);
+          }
+          .shadow-js {
+            filter: drop-shadow(0 0 5px #ffff33);
+          }
+          .shadow-ts {
+            filter: drop-shadow(0 0 5px #3377ff);
+          }
+          .shadow-node {
+            filter: drop-shadow(0 0 5px #55ff33);
+          }
+          .shadow-react {
+            filter: drop-shadow(0 0 5px #33ffff);
+          }
+          .shadow-angular {
+            filter: drop-shadow(0 0 5px #ff3333);
+          }
+          .shadow-vue {
+            filter: drop-shadow(0 0 5px #33ff88);
+          }
+          
+          .circle-html {
+            -webkit-animation: anim_circle-html 1s ease-in-out forwards;
+                    animation: anim_circle-html 1s ease-in-out forwards;
+          }
+          .circle-css {
+            -webkit-animation: anim_circle-css 1s ease-in-out forwards;
+                    animation: anim_circle-css 1s ease-in-out forwards;
+          }
+          .circle-scss {
+            -webkit-animation: anim_circle-scss 1s ease-in-out forwards;
+                    animation: anim_circle-scss 1s ease-in-out forwards;
+          }
+          .circle-js {
+            -webkit-animation: anim_circle-js 1s ease-in-out forwards;
+                    animation: anim_circle-js 1s ease-in-out forwards;
+          }
+          .circle-ts {
+            -webkit-animation: anim_circle-ts 1s ease-in-out forwards;
+                    animation: anim_circle-ts 1s ease-in-out forwards;
+          }
+          .circle-node {
+            -webkit-animation: anim_circle-node 1s ease-in-out forwards;
+                    animation: anim_circle-node 1s ease-in-out forwards;
+          }
+          .circle-react {
+            -webkit-animation: anim_circle-react 1s ease-in-out forwards;
+                    animation: anim_circle-react 1s ease-in-out forwards;
+          }
+          .circle-angular {
+            -webkit-animation: anim_circle-angular 1s ease-in-out forwards;
+                    animation: anim_circle-angular 1s ease-in-out forwards;
+          }
+          .circle-vue {
+            -webkit-animation: anim_circle-vue 1s ease-in-out forwards;
+                    animation: anim_circle-vue 1s ease-in-out forwards;
+          }
+          
+          .progressbar__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 0.25em 0.5em;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 0.25em;
+            transform: translate(-50%, -50%) rotate(90deg);
+          }
+          
+          @-webkit-keyframes anim_circle-html {
+            to {
+              stroke-dashoffset: 22;
+            }
+          }
+          
+          @keyframes anim_circle-html {
+            to {
+              stroke-dashoffset: 22;
+            }
+          }
+          @-webkit-keyframes anim_circle-css {
+            to {
+              stroke-dashoffset: 66;
+            }
+          }
+          @keyframes anim_circle-css {
+            to {
+              stroke-dashoffset: 66;
+            }
+          }
+          @-webkit-keyframes anim_circle-scss {
+            to {
+              stroke-dashoffset: 132;
+            }
+          }
+          @keyframes anim_circle-scss {
+            to {
+              stroke-dashoffset: 132;
+            }
+          }
+          @-webkit-keyframes anim_circle-js {
+            to {
+              stroke-dashoffset: 88;
+            }
+          }
+          @keyframes anim_circle-js {
+            to {
+              stroke-dashoffset: 88;
+            }
+          }
+          @-webkit-keyframes anim_circle-ts {
+            to {
+              stroke-dashoffset: 198;
+            }
+          }
+          @keyframes anim_circle-ts {
+            to {
+              stroke-dashoffset: 198;
+            }
+          }
+          @-webkit-keyframes anim_circle-node {
+            to {
+              stroke-dashoffset: 308;
+            }
+          }
+          @keyframes anim_circle-node {
+            to {
+              stroke-dashoffset: 308;
+            }
+          }
+          @-webkit-keyframes anim_circle-react {
+            to {
+              stroke-dashoffset: 387.2;
+            }
+          }
+          @keyframes anim_circle-react {
+            to {
+              stroke-dashoffset: 387.2;
+            }
+          }
+          @-webkit-keyframes anim_circle-angular {
+            to {
+              stroke-dashoffset: 418;
+            }
+          }
+          @keyframes anim_circle-angular {
+            to {
+              stroke-dashoffset: 418;
+            }
+          }
+          @-webkit-keyframes anim_circle-vue {
+            to {
+              stroke-dashoffset: 431.2;
+            }
+          }
+          @keyframes anim_circle-vue {
+            to {
+              stroke-dashoffset: 431.2;
+            }
+          }
+    </style>
 </head>
 <body>
-    <div id="welcome-section">
-        <h1>Hi this is Ayushman</h1>
-        <nav id="navbar">
-            <a href="Contact"></a>
+    <header>
+        <nav>
+            <div class="left">Personal Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#About">About Me</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
         </nav>
-        <link rel="stylesheet" href="" id="profile-link">
-    </div>
-    <div id="projects">
-        <a href="https://app.netlify.com/teams/ayush428/sites?visibility=public">Show all Projects</a>
-        <div class="project-title"></div>
-    </div>
-    <div id="Contact"></div>
+    </header>
+
+    <!-- cla -->
+
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hey there, My name is Ayushman.
+                <div>I am a passionate</div>
+                <span id="element" style="color: #3DCFB6;"></span>
+            </div>
+            <div class="rightSection">
+                <img src="picture.png" alt="Profile picture of Ayushman">
+            </div>
+        </section>
+        <hr style="border: 0; background: #3dcfb6; height:1px">
+        <section class="secondSection">
+            <div class="leftSection">
+                <img src="ggif.gif" alt="">
+            </div>
+            <div class="rightSection">
+                <h1 style="color: #f3f9f8; width: 100%; display: flex; justify-content: center; align-items: center; font-size: xx-large; line-height: 1.8; height: 20%;">
+                    <span style="color: white; text-decoration: underline; text-decoration-color: #3DCFB6;">Ab</span>out me
+                </h1>
+                <!-- Added spacing below the heading -->
+                <h3 style="margin-top: 20px;">Hello World  👋 </h3>
+                <p style="margin-top: 15px;">
+                    I am <span>Ayushman Gupta</span> from <span>Kolkata, India</span>. I started my coding journey in 2022, when I was in 7th standard.
+                </p>
+                <p>I am fluent in <span>Java, C++, React, and JavaScript</span>.</p>
+                <p>
+                    I am currently a computer science student and a <span>wannabe web Developer</span>.
+                </p>
+                <p>Besides coding, some other activities I consider my passion:</p>
+                <ul>
+                    <li>Reading</li>
+                    <li>Movies</li>
+                    <li>Just chilling</li>
+                </ul>
+        
+                <code>
+                    class Person { <br>
+                        &nbsp;&nbsp;constructor() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.name = "Ayushman"; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.traits = ["Web Developer", "Photo Editor", "Student"]; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.age = new Date().getFullYear() - 2008; <br>
+                        &nbsp;&nbsp;} <br>
+                    }
+                </code>
+            </div>
+        </section>
+        <hr style="border: 0; background: #3dcfb6; height:1px">
+        <section class="thirdSection">
+            <h1 style="color: white;">Skills</h1>
+            <div class="container">
+
+                <div class="container__progressbars">
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-html shadow-html"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-html">HTML</span>
+                    </div>
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-css shadow-css"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-css">CSS</span>
+                    </div>
+            
+                    `
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-js shadow-js"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-js">JavaScript</span>
+                    </div>
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-ts">TypeScript</span>
+                    </div>
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-node shadow-node"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-node">React</span>
+                    </div>
+            
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-react shadow-react"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-react">Bootsrap</span>
+                    </div>
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-angular shadow-angular"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-angular">C++</span>
+                    </div>
+                    <div class="progressbar">
+                        <svg class="progressbar__svg">
+                            <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-vue shadow-vue"> </circle>
+                        </svg>
+                        <span class="progressbar__text shadow-vue">Java</span>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- My social networks (imported from another pen)-->
+            <div id="main-container-social" class="main-container-social"></div>
+        </section>
+        <hr style="border: 0; background: #3dcfb6; height:1px">
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Computer Science Student', 'Photo Editor'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        });
+    </script>
 </body>
 </html>
